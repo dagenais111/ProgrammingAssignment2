@@ -1,5 +1,4 @@
 ## This sets the initial variables and values for the function
-
 makeCacheMatrix <- function(x = matrix()) 
 {
   i <- NULL
@@ -11,7 +10,8 @@ makeCacheMatrix <- function(x = matrix())
   get <- function() x
   setinverse <- function(inverse) i <<- inverse
   getinverse <- function() i
-  list(
+  list
+  (
     set = set,
     get = get,
     setinverse = setinverse,
@@ -20,7 +20,6 @@ makeCacheMatrix <- function(x = matrix())
 }
 
 ## This confirms the matrix has an inverse and gets it from cache
-
 cacheSolve <- function(x, ...) 
   {
   i <- x$getinverse()
